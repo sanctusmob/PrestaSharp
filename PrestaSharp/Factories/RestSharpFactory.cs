@@ -93,10 +93,6 @@ namespace Bukimedia.PrestaSharp.Factories
             var client = GetClient();
             AddWsKey(request);
             var response = client.Execute<T>(request);
-            if(response.Data == null)
-            {
-                Console.WriteLine("data null");
-            }
             CheckResponse(response, request);
             return response.Data;
         }
